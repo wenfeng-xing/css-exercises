@@ -35,3 +35,9 @@ div.image-wrapper {
     flex: 1 1;
     margin: 2px;
 }
+
+@media screen and (max-width: 1000px) {
+    sidebar.right {
+        display: none;
+    }
+}
