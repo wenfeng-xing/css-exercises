@@ -7,17 +7,24 @@ body {
 div.container {
     width: 100vw;
     min-height: 100vh;
-    display: grid;
-    grid-template-columns: 330px 80%;
+    display: flex;
 }
 
 sidebar.left {
+    flex: 0 0 300px;
     background-color: aquamarine;
 }
 
-main.images-container {
+main.images-wrapper {
+    flex: 1 1 70%;
+    background-color: azure;
     display: flex;
     flex-wrap: wrap;
+}
+
+sidebar.right {
+    flex: 0 0 300px;
+    background-color: brown;
 }
 
 div.image-wrapper {
