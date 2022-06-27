@@ -12,7 +12,7 @@ body {
 }
 
 nav {
-  height: 10vh;
+  height: 10vh; 
   display: flex;
   background-color:darkslategray;
   justify-content: space-around;
@@ -39,60 +39,62 @@ a:link {
   display: flex;
 }
 
-.left-container {
-  flex: 1 1 100%;
-  background-color: burlywood;
+sidebar {
+  flex: 0 0 425px;
+
   margin: 0px 5px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 3px;
 }
 
-.right-container {
-  flex: 1 1 100%;
-  background-color: cadetblue;
-  margin: 0px 5px;
+.left {
+  background-color: blueviolet;
+}
+
+.right {
+  background-color: cyan;
+  order: 3;
+}
+
+.item-container {
+  flex: 1 1 1300px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 3px;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
 }
 
 div.item {
-  background-color: crimson;
+  height: 100%;
+  width: 100%;
+  background-color: burlywood;
 }
 
-@media screen and (max-width: 1750px) {
-  .right-container {
-    flex: 1 1 100%;
-    background-color: cadetblue;
-    margin: 0px 5px;
-    display: grid;
+@media screen and (max-width: 1825px) {
+  .item-container {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 3px;
   }
+}
 
-  .left-container {
-    grid-template-columns: repeat(3, 1fr);
+@media screen and (max-width: 1556px) {
+  .item-container {
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 1300px) {
-  .right-container {
-    flex: 1 1 100%;
-    background-color: cadetblue;
-    margin: 0px 5px;
-    display: grid;
-    grid-template-columns: minmax(235px, 1fr) minmax(235px, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 3px;
+  .right {
+    display: none;
   }
+  .item-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
 
-  .left-container {
-    grid-template-columns: minmax(235px, 1fr) minmax(235px, 1fr);
+@media screen and (max-width: 1100px) {
+  .item-container {
+    grid-template-columns: minmax(220px, 1fr) minmax(220px, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
 }

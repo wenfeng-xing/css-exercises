@@ -12,7 +12,7 @@ body {
 }
 
 nav {
-  height: 10vh; 
+  height: 10vh;
   display: flex;
   background-color:darkslategray;
   justify-content: space-around;
@@ -32,26 +32,19 @@ a:link {
 /* theme specific styles */
 
 .content-container {
-  height: 90vh;
+  flex: 1 1 90vh;
   width: 100vw;
+  margin: 5px;
+  background-color: cornsilk;
   display: flex;
-  justify-content: space-between;
 }
 
-[class^="column-"] {
-  flex: 0 0 400px;
-  background-color: brown;
-  margin: 0px 5px;
+.feeds-container {
+  flex: 0 0 245px;
+  background-color: aqua;
 }
 
-@media screen and (max-width: 1640px) {
-  .column-3 {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1220px) {
-  .column-2 {
-    display: none;
-  }
+.articles-container {
+  flex: 0 0 425px;
+  background-color: cadetblue;
 }
